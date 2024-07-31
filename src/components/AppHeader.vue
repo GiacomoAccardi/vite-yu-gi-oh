@@ -13,12 +13,12 @@ header {
     background-color: white;
     display: flex;
     align-items: center;
+    padding: 20px;
 
     img {
         width: 50px;
         height: 25px;
         margin-right: 10px;
-        margin-left: 10px;
     }
 }
 </style>

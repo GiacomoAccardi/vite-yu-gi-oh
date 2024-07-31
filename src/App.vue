@@ -2,13 +2,15 @@
 import { store } from './store.js' //importo il file store.js
 import axios from 'axios';
 import AppHeader from './components/AppHeader.vue'
+import AppMain from './components/AppMain.vue'
 
 export default {
   data() {
     store
   },
   components: {
-    AppHeader
+    AppHeader,
+    AppMain
   },
   created() {
     this.getCards();
@@ -28,9 +30,10 @@ export default {
 <template>
   <div>
     <AppHeader />
+    <AppMain />
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "./styles/generals.scss";
 </style>

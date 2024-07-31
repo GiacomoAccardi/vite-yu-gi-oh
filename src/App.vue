@@ -1,10 +1,14 @@
 <script>
 import { store } from './store.js' //importo il file store.js
 import axios from 'axios';
+import AppHeader from './components/AppHeader.vue'
 
 export default {
   data() {
     store
+  },
+  components: {
+    AppHeader
   },
   created() {
     this.getCards();
@@ -23,7 +27,7 @@ export default {
 
 <template>
   <div>
-
+    <AppHeader />
   </div>
 </template>
 

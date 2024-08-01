@@ -1,7 +1,12 @@
 
 <script>
+import { store } from '../store';
 export default {
-    
+    data(){
+        return {
+            store
+        }
+    }
 }
 </script>
 
@@ -9,7 +14,7 @@ export default {
     <div class="container">
         <div class="content">
             <select name="tipe-select" id="ts">
-                <option value="null">Seleziona un archetipo</option>
+                <option value="" disabled selected>- Seleziona un archetipo</option>
             </select>
         </div>
     </div>
@@ -19,12 +24,13 @@ export default {
     .container{
         background-color: white;
         .content{
-            padding: 40px;
+            padding: 20px;
 
             select{
                 height: 50px;
-                width: 250px;
+                width: 270px;
                 font-size: 14pt;
+                padding: 0 20px;
             }
 
         }

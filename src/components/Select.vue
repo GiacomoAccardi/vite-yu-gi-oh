@@ -1,12 +1,26 @@
 
 <script>
 import { store } from '../store';
+import axios from 'axios';
+
 export default {
     data(){
         return {
             store
         }
-    }
+    },
+    created(){
+        this.getArchetypes();
+    },
+    methods: {
+    //creo una funzione per popolare l'array che conterrà le carte all'interno di store.js
+    getArchetypes() {
+      axios.get(store.apiArch).then((data) => {
+        store.archList = data.data;
+        console.log(store.archList)
+      });
+    },
+  },
 }
 </script>
 
@@ -15,6 +29,7 @@ export default {
         <div class="content">
             <select name="tipe-select" id="ts">
                 <option value="" disabled selected>- Seleziona un archetipo</option>
+                <option value="" v-for="archetype in store.archList" :key="index">{{ archetype.archetype_name }}</option>
             </select>
         </div>
     </div>

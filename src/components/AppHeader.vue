@@ -14,6 +14,7 @@ header {
     display: flex;
     align-items: center;
     padding: 20px;
+    margin-bottom: 60px;
 
     img {
         width: 50px;
